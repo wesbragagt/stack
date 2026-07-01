@@ -212,7 +212,7 @@ resource "helm_release" "nginx_ingress" {
           use-forwarded-headers         = "true"
           use-proxy-protocol            = "true"
           enable-real-ip                = "true"
-          proxy-real-ip-cidr            = "0.0.0.0/0"
+          proxy-real-ip-cidr            = "10.0.0.0/8,172.16.0.0/12,192.168.0.0/16"
 
           // Use HTTP/2
           use-http2 = "true"
