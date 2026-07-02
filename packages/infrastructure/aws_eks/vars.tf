@@ -124,6 +124,12 @@ variable "spot_nodes_enabled" {
   default     = true
 }
 
+variable "controller_node_instance_types" {
+  description = "The instance types to use for the controller nodes. Must be ARM64 (Graviton) instance types."
+  type        = list(string)
+  default     = ["t4g.medium", "m6g.medium", "m7g.medium"]
+}
+
 ################################################################################
 ## Access Control
 ################################################################################
